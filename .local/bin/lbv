@@ -1,0 +1,2 @@
+#!/bin/bash
+exec "${BIN_DIR}/${1}/venv/bin/python" "${BIN_DIR}/${1}/main.py" "${@:2}"

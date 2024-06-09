@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Generic
+alias ls="ls -hN --color=auto --group-directories-first"
+alias la="ls -a"
+alias ll="ls -al"
+
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -vI"
+alias md="mkdir -pv"
+
+alias pacman="sudo pacman"
+
+alias limbo='(){ mv $@ .limbo }'
+alias v="vim"
+alias tmux="tmux -u2"
+
+alias rodeo="git --git-dir=$HOME/.rodeo --work-tree=$HOME"
+alias mymelody="lbv mymelody"
+
+# Git
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gca="git commit --amend --no-edit"
+alias gpl="git pull"
+alias gp="git push"
+alias gpf="git push --force"
+alias gq="git commit --amend --no-edit && git push --force"
+alias glo="(){ git log --oneline -$([ -z $1 ] && echo 5 || echo $1) }"alias gb="git checkout"
+alias gbn="git checkout -b"
+
+# Cloud
+alias k=kubectl
+
+# Functions
+alias xkcd5="xkcdpass --delimiter='' --min=5 --max=5 --case='first'"
+gencred() {
+    echo "Username: $(xkcd5 --numwords=1)"
+    echo "Password: $(xkcd5 --numwords=4)#7"
+}

@@ -1,0 +1,8 @@
+black
+requests
+spotipy
+yt-dlp
+python-dateutil
+selenium
+beautifulsoup4
+ytmusicapi
