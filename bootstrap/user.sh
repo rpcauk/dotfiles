@@ -63,13 +63,14 @@ installffaddons(){
 
 ### THE ACTUAL SCRIPT ###
 
-source "/home/${user_name}/dotfiles/bootstrap/config"
+source "dotfiles/bootstrap/config"
 
 # Refresh Arch keyrings.
 pacman --noconfirm -S archlinux-keyring # >/dev/null 2>&1
 
-# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-# grub-mkconfig -o /boot/grub/grub.cfg
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
+grub-mkconfig -o /boot/grub/grub.cfg
 
 # Set up networking
 systemctl enable --now NetworkManager
@@ -118,5 +119,3 @@ sudo -u "${user_name}" yay -S --noconfirm --needed - < "/home/${user_name}/dotfi
 # pdir="$browserdir/$profile"
 # [ -d "$pdir" ] && installffaddons
 # pkill -u "${user}" librewolf
-
-echo "root:${root_pwd}" | chpasswd
