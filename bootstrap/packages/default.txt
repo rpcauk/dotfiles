@@ -1,0 +1,7 @@
+hyprland
+kitty
+waybar
+rofi
+ttf-cascadia-code-nerd
+neovim
+unzip
