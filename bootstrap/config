@@ -1,0 +1,5 @@
+export user_name=ryan
+export user_pwd=password
+export root_pwd=password
+export disk=/dev/sda
+export host_name=porthpean

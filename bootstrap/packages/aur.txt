@@ -1,1 +1,2 @@
 librewolf-bin
+zsh-syntax-highlighting

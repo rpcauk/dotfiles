@@ -1,7 +1,0 @@
-#TAG,NAME IN REPO (or git url),PURPOSE (should be a verb phrase to sound right while installing)
-,hyprland,""
-,ttf-cascadia-code-nerd,""
-,gnome-keyring,"serves as the system keyring."
-,neovim,"a tidier vim with some useful features"
-,man-db,"lets you read man pages of programs."
-A,librewolf,""
