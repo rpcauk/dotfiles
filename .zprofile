@@ -1,7 +1,9 @@
 #!/bin/bash
 
-export EDITOR=vim
-export GIT_EDITOR=vim
+export EDITOR=nvim
+export GIT_EDITOR=nvim
+export TERMINAL=kitty
+export BROWSER=firefox
 export PAGER=less
 unset LESSOPEN
 
@@ -20,3 +22,5 @@ export BROWSER="$BIN_DIR/firefox"
 # fzf config
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow -g '!{.cache,.rodeo,.git,.kube,limbo,shared,venv}/' -g '!.local/{share,state}'/"
 export FZF_DEFAULT_OPTS="--height=40% --layout=reverse -m --border=rounded --no-separator --no-scrollbar"
+
+[ "$(tty)" = "/dev/tty1" ] && exec Hyprland

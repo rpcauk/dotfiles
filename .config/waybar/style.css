@@ -1,0 +1,109 @@
+/* -----------------------------------------------------------------------------
+ * Styles
+ * -------------------------------------------------------------------------- */
+
+/* COLORS */
+
+/* Nord */
+/* https://www.nordtheme.com/docs/colors-and-palettes */
+@define-color nord0  #2E3440; /* background */
+@define-color nord1  #3B4252; /* black      */
+@define-color nord2  #434C5E; /* focus      */
+@define-color nord3  #4C566A;
+@define-color nord4  #D8DEE9; /* foreground */
+@define-color nord5  #E5E9F0; /* white      */
+@define-color nord6  #ECEFF4; /* text    */
+@define-color nord7  #8FBCBB;
+@define-color nord8  #88C0D0; /* cyan    */
+@define-color nord9  #81A1C1; /* blue    */
+@define-color nord10 #5E81AC;
+@define-color nord11 #BF616A; /* red     */
+@define-color nord12 #D08770; /* orange  */
+@define-color nord13 #EBCB8B; /* yellow  */
+@define-color nord14 #A3BE8C; /* green   */
+@define-color nord15 #B48EAD; /* magenta */
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+}
+
+window#waybar {
+    background: @nord0;
+    border-bottom: 1px solid @nord6;
+}
+
+/*
+window#waybar > box {
+    margin: 10px 10px 0px 10px;
+    background-color: @nord0;
+}
+*/
+
+#workspaces button {
+    padding: 0 5px;
+    color: @nord2;
+}
+
+#workspaces button.active {
+    color: @nord6;
+}
+
+#workspaces button:hover {
+    border-bottom: 1px solid @nord6;
+    color: @nord6;
+    background: @nord2;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#window {
+    margin-right: 40px;
+    margin-left: 40px;
+    font-weight: normal;
+}
+
+#bluetooth,
+#network,
+#battery,
+#clock,
+#custom-power,
+#pulseaudio {
+    padding: 0 3px;
+    background: @nord0;
+    color: @nord6;
+    border-bottom: 1px solid @nord6;
+}
+
+#custom-separator {
+    padding: 0;
+    background: @nord0;
+    color: @nord6;
+    border-bottom: 1px solid @nord6;
+}
+
+#bluetooth.disabled,
+#bluetooth.off,
+#pulseaudio.muted,
+#pulseaudio.source-muted,
+#network.disconnected {
+    color: @nord2;
+    border-bottom: 1px solid @nord6;
+}
+
+#battery.warning {
+    background: @nord12;
+    border-bottom: 1px solid @nord6;
+}
+
+#battery.critical {
+    color: @nord11;
+    border-bottom: 1px solid @nord6;
+}
+
+.modules-right {
+    margin-right: 5px;
+}

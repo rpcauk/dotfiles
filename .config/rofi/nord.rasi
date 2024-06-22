@@ -1,0 +1,66 @@
+* {
+  nord0: #2E3440;
+  nord2: #434C5E;
+  nord6: #ECEFF4;
+  nord11: #BF616A;
+  font: "JetBrainsMono Nerd Font 9";
+}
+
+window {
+  background-color: @nord6;
+  text-color: @nord6;
+
+  anchor: north;
+  location: north;
+
+  height: 30px;
+  y-offset: -30px;
+  width: 100%;
+
+  border: 0px;
+  padding: 0 0 1 0;
+
+  children: [ horibox ];
+}
+
+horibox {
+  background-color: @nord0;
+  orientation: horizontal;
+  children: [ prompt, entry, listview ];
+}
+
+prompt {
+  background-color: @nord6;
+  text-color: @nord0;
+  border: 0px;
+  padding: 6px;
+}
+
+entry {
+  background-color: @nord0;
+  text-color: @nord6;
+  expand: false;
+  width: 10em;
+  padding: 6px;
+}
+
+listview {
+  background-color: @nord0;
+  layout: horizontal;
+  spacing: 6px;
+  lines: 100;
+}
+
+element {
+  background-color: @nord0;
+}
+
+element-text {
+  text-color: @nord2;
+  background-color: @nord0;
+  margin: 6px;
+}
+
+element-text selected {
+  text-color: @nord6;
+}

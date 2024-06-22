@@ -11,9 +11,10 @@ alias rm="rm -vI"
 alias md="mkdir -pv"
 
 alias pacman="sudo pacman"
+alias up='sudo pacman -Syu --noconfirm --needed - < "/home/ryan/dotfiles/bootstrap/packages/default.txt" && yay -Syu --noconfirm --needed - < "/home/ryan/dotfiles/bootstrap/packages/aur.txt"'
 
 alias limbo='(){ mv $@ .limbo }'
-alias v="vim"
+alias v="nvim"
 alias tmux="tmux -u2"
 
 alias rodeo="git --git-dir=$HOME/.rodeo --work-tree=$HOME"

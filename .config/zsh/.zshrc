@@ -1,7 +1,7 @@
 # Setup history
 mkdir -p "$XDG_CACHE_HOME/zsh"
 HISTFILE="$XDG_CACHE_HOME/zsh/history"
-HISTSE=1000000000
+HISTSIZE=1000000000
 SAVEHIST=1000000000
 export HISTTIMEFORMAT="[%F %T] "
 setopt extended_history hist_find_no_dups inc_append_history share_history
@@ -31,18 +31,18 @@ zstyle ':vcs_info:git:*' formats ' %b' # Add git branch to prompt
 precmd() { vcs_info }                  #
 PROMPT=$'\n''%F{blue}%~%f%F{green}${vcs_info_msg_0_}%f'$'\n''%(?.%F{green}.%F{red})❯%f '
 
-function preexec() {
-  timer=$(($(date +%s%0N)/1000000))
-}
+# function preexec() {
+#   timer=$(($(date +%s%0N)/1000000))
+# }
 
-function precmd() {
-  if [ $timer ]; then
-    now=$(($(date +%s%0N)/1000000))
-    elapsed=$(($now-$timer))
-    export RPROMPT="%F{cyan}${elapsed}ms%f "
-    unset timer
-  fi
-}
+# function precmd() {
+#   if [ $timer ]; then
+#     now=$(($(date +%s%0n)/1000000))
+#     elapsed=$(($now-$timer))
+#     export rprompt="%f{cyan}${elapsed}ms%f "
+#     unset timer
+#   fi
+# }
 
 # Simplifies prompt for scrollback
 zle-line-init() {
@@ -57,7 +57,8 @@ zle-line-init() {
   local saved_prompt=$PROMPT
   local saved_rprompt=$RPROMPT
   PROMPT='%F{yellow}❯%f '
-  RPROMPT=' [%D{%L:%M:%S}]'
+  RPROMPT=''
+  # RPROMPT=' [%D{%L:%M:%S}]'
   zle .reset-prompt
   PROMPT=$saved_prompt
   RPROMPT=$saved_rprompt

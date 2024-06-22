@@ -33,10 +33,6 @@ sgdisk -a 2048 -o ${DISK} # new gpt disk 2048 alignment
 # mount --mkdir "${DISK}1" /mnt/boot
 # mount --mkdir "${DISK}4" /mnt/home
 
-sgdisk -n 5::+300M --typecode=5:ef00 --change-name=5:'BOOT' ${DISK}
-sgdisk -n 6::+24G --typecode=6:8200 --change-name=6:'SWAP' ${DISK}
-sgdisk -n 7::+25G --typecode=7:8304 --change-name=7:'ROOT' ${DISK}
-sgdisk -n 8::-0 --typecode=8:8302 --change-name=8:'HOME' ${DISK}
 partprobe ${DISK} # reread partition table to ensure it is correct
 mkfs.fat -F 32 "${DISK}5"
 mkswap "${DISK}6"

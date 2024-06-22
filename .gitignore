@@ -1,3 +1,4 @@
 .local/share/
 .local/state/
+.config/pulse/
 venv/
