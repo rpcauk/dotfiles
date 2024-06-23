@@ -1,0 +1,55 @@
+#!/bin/bash
+
+
+# options=$([ $(bluetoothctl show | grep -q "Powered: yes") ] && echo "list\nconnect\ndisconnect\nenable" || echo "enable")
+options=$([ $(bluetoothctl show | grep -q "Powered: yes") ] && echo "enable" || echo "list\nconnect\ndisconnect\nforget\ndisable")
+action=$(printf "$options" | rofi -dmenu -p "bluetooth")
+
+case "$action" in
+  "list")
+    connected=$(bluetoothctl devices Connected | cut -d' ' -f3-)
+    echo "$connected" | rofi -dmenu -p "connected"
+  ;;
+  "connect")
+    connect_type=$(printf "paired\nnew" | rofi -dmenu -p "connect")
+    case "$connect_type" in
+      "paired")
+        paired=$(bluetoothctl devices Paired)
+        chosen=$(echo "$paired" | cut -d' ' -f3- | rofi -dmenu -p "connect")
+	[ -z "$chosen" ] && exit 1
+        chosen_id=$(echo "$paired" | grep -w "$chosen" | cut -d' ' -f2)
+	bluetoothctl connect $chosen_id && notify-send "Connected Successfully" "Bluetooth device $chosen is now connected" || notify-send "Failed to Connect" "Failed to connect to bluetooth device $chosen"
+      ;;
+      "new")
+        notify-send "Scanning for Bluetooth Devices"
+        scan=$(bluetoothctl --timeout 20 scan on 2>&1 | sed --quiet 's/.*NEW.* Device //p')
+        chosen=$(echo "$scan" | cut -d' ' -f2- | rofi -dmenu -p "connect")
+	[ -z "$chosen" ] && exit 
+        chosen_id=$(echo "$scan" | grep -w "$chosen" | cut -d' ' -f1)
+        bluetoothctl pair $chosen_id && bluetoothctl trust $chosen_id && bluetoothctl connect $chosen_id && notify-send "Connected Successfully" "Bluetooth device $chosen is now connected" || notify-send "Failed to Connect" "Failed to connect to bluetooth device $chosen"
+      ;;
+      *) exit 1 ;;
+    esac
+  ;;
+  "disconnect")
+    connected=$(bluetoothctl devices Connected)
+    chosen=$(echo "$connected" | cut -d' ' -f3- | rofi -dmenu -p "disconnect")
+    [ -z "$chosen" ] && exit 1
+    chosen_id=$(echo "$connected" | grep -w "$chosen" | cut -d' ' -f2)
+    bluetoothctl disconnect $chosen_id && notify-send "Device Disconnected" "Bluetooth device $chosen has been disconnected" || notify-send "Failed to Disconnect Device" "Could not disconnect bluetooth device $chosen"
+  ;;
+  "forget")
+    paired=$(bluetoothctl devices Paired)
+    chosen=$(echo "$paired" | cut -d' ' -f3- | rofi -dmenu -p "forget")
+    [ -z "$chosen" ] && exit 1
+    chosen_id=$(echo "$paired" | grep -w "$chosen" | cut -d' ' -f2)
+    bluetoothctl remove $chosen_id && notify-send "Device Forgotten" "Bluetooth device $chosen has been forgotten" || notify-send "Failed to Forget Device" "Could not forget bluetooth device $chosen"
+  ;;
+  "enable")
+    bluetoothctl power on && notify-send "Bluetooth Enabled" || send-notify "Bluetooth Failed to Enable"
+  ;;
+  "disable")
+    bluetoothctl power off && notify-send "Bluetooth Disabled" || send-notify "Bluetooth Failed to Disable"
+  ;;
+  *) exit 1 ;;
+esac

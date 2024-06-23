@@ -1,0 +1,16 @@
+#!/bin/bash
+
+chosen=$(printf "lock\noff\nreboot" | rofi -dmenu -p "power")
+
+case "$chosen" in
+  "lock") hyprlock ;;
+  "off")
+    confirm=$(printf "no\nyes" | rofi -dmenu -p "confirm")
+    [ "$confirm" = "yes" ] && poweroff
+    ;;
+  "reboot")
+    confirm=$(printf "no\nyes" | rofi -dmenu -p "confirm")
+    [ "$confirm" = "yes" ] && poweroff
+    ;;
+  *) exit 1 ;;
+esac

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+ssids=$(nmcli -f active,ssid device wifi | sed 1d)
+active=$(echo "$ssids" | sed -rn 's|^yes     ([^ ]*)\s+|\1|p')
+other=$(echo "$ssids" | sed -rn 's|^no      ([^ ]*)\s+|\1|p' | sort | uniq | grep -vw "$active" | sed 1d)
+connections=$(nmcli -f name,type connection | sed 1d | grep "wifi" | awk '{print $1}')
+wifi=$(nmcli -f wifi general | sed 1d | awk '{print $1}')
+
+prompt=$([ -z "$active" ] && echo "$wifi" || echo "$active")
+
+options=$([ "$wifi" = "enabled" ] && echo "connect\ndisconnect\nforget\ndisable" || echo "enable")
+action=$(printf "$options" | rofi -dmenu -p "$prompt")
+
+case "$action" in
+  "connect")
+    chosen=$(echo "$other" | rofi -dmenu -p "connect")
+    [ -z "$chosen" ] && exit 1
+    success_message="Successfully connected to network $chosen"
+    failure_message="Could not connect to network $chosen"
+    if [ $(echo "$connections" | grep -w "$chosen") ]; then
+      nmcli connection up id "$chosen" | grep "successfully" && notify-send "Connected Successfully" "$success_message" || notify-send "Connection Failed" "$failure_message"
+    else
+      pwd=$(rofi -dmenu -p "password")
+      [ -z "$pwd" ] && exit 1
+      nmcli device wifi connect "$chosen" password "$pwd" | grep "successfully" && notify-send "Connected Successfully" "$success_message" || notify-send "Connection Failed" "$failure_message"
+    fi
+  ;;
+  "disconnect")
+    nmcli connection down id "$active" | grep "successfully" && notify-send "Disconnected Successfully" "Successfully disconnected from network $active" || notify-send "Disconnection Failed" "Could not disconnected from network $active"
+  ;;
+  "forget")
+    chosen=$(echo "$connections" | rofi -dmenu -p "forget")
+    [ -z "$chosen" ] && exit 1
+    nmcli connection delete id "$chosen" | grep "successfully" && notify-send "Connection Deleted" "Successfully deleted connection to network $chosen" || notify-send "Connection Deletion Failed" "Could not delete connection to network $chosen"
+  ;;
+  "enable")
+    nmcli radio wifi on && notify-send "Wifi Enabled Successfully" || notify-send "Failed to Enable Wifi"
+  ;;
+  "disable")
+    nmcli radio wifi off && notify-send "Wifi Disabled Successfully" || notify-send "Failed to Disable Wifi"
+  ;;
+  *) exit 1 ;;
+esac

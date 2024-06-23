@@ -48,3 +48,6 @@ terraform
 imagemagick
 scrcpy
 openssh
+wev
+libnotify
+expect

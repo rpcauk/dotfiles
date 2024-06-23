@@ -17,7 +17,7 @@ export ZCOMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 export BIN_DIR="$HOME/.local/bin"
 export PROJECTS_DIR="$HOME/projects"
 
-export BROWSER="$BIN_DIR/firefox"
+export PATH=$PATH:$BIN_DIR
 
 # fzf config
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow -g '!{.cache,.rodeo,.git,.kube,limbo,shared,venv}/' -g '!.local/{share,state}'/"

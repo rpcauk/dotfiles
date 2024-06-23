@@ -19,7 +19,7 @@ setopt beep combining_chars zle
 bindkey -v
 
 # Add to path
-export PATH=$PATH:$BIN_DIR
+# export PATH=$PATH:$BIN_DIR
 
 # Load aliases
 source "$XDG_CONFIG_HOME/shell/aliasrc"

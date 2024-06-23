@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chosen=$(ls -p $BIN_DIR | grep -v / | rofi -dmenu -p "run" -monitor eDP-1)
+exec $chosen
