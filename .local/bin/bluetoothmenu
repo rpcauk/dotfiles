@@ -2,7 +2,7 @@
 
 
 # options=$([ $(bluetoothctl show | grep -q "Powered: yes") ] && echo "list\nconnect\ndisconnect\nenable" || echo "enable")
-options=$([ $(bluetoothctl show | grep -q "Powered: yes") ] && echo "enable" || echo "list\nconnect\ndisconnect\nforget\ndisable")
+options=$(bluetoothctl show | grep -q "Powered: yes" && echo "list\nconnect\ndisconnect\nforget\ndisable" || echo "enable")
 action=$(printf "$options" | rofi -dmenu -p "bluetooth")
 
 case "$action" in

@@ -1,0 +1,23 @@
+2024-06-25 12:05:20.883 [info] Log level: Info
+2024-06-25 12:05:20.883 [info] Validating found git in: "git"
+2024-06-25 12:05:20.883 [info] Using git "2.45.2" from "git"
+2024-06-25 12:05:20.883 [info] > git rev-parse --show-toplevel [12ms]
+2024-06-25 12:05:20.883 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2024-06-25 12:05:20.883 [info] Open repository: /home/ryan/projects/smuyo
+2024-06-25 12:05:20.892 [info] > git config --get commit.template [2ms]
+2024-06-25 12:05:20.900 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2024-06-25 12:05:20.908 [warning] ENOENT: no such file or directory, open '/home/ryan/projects/smuyo/.git/refs/remotes/origin/master'
+2024-06-25 12:05:20.910 [info] > git rev-parse refs/remotes/origin/master [3ms]
+2024-06-25 12:05:20.925 [info] > git status -z -uall [10ms]
+2024-06-25 12:05:20.955 [info] > git merge-base refs/heads/master refs/remotes/origin/master [23ms]
+2024-06-25 12:05:20.961 [info] > git config --get commit.template [11ms]
+2024-06-25 12:05:20.961 [info] > git rev-list --count --left-right refs/heads/master...refs/remotes/origin/master [2ms]
+2024-06-25 12:05:20.970 [info] > git diff --name-status -z --diff-filter=ADMR 531407e0a4baa934754d94d88824fdca775b1649...refs/remotes/origin/master [5ms]
+2024-06-25 12:05:20.971 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2024-06-25 12:05:20.975 [warning] ENOENT: no such file or directory, open '/home/ryan/projects/smuyo/.git/refs/remotes/origin/master'
+2024-06-25 12:05:20.977 [info] > git rev-parse refs/remotes/origin/master [2ms]
+2024-06-25 12:05:20.983 [info] > git status -z -uall [2ms]
+2024-06-25 12:05:21.415 [info] > git check-ignore -v -z --stdin [2ms]
+2024-06-25 12:05:45.638 [info] > git show --textconv :mymelody.py [6ms]
+2024-06-25 12:05:45.639 [info] > git ls-files --stage -- /home/ryan/projects/smuyo/mymelody.py [2ms]
+2024-06-25 12:05:45.645 [info] > git cat-file -s 84abe1139212f821e3af96bf751131b1b88ce431 [2ms]

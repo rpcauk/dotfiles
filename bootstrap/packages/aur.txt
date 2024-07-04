@@ -1,4 +1,6 @@
 zsh-syntax-highlighting
 icaclient
-zoom-citrix-plugin
 zotify
+vscodium-bin
+mpd-mpris-bin
+simple-mtpfs

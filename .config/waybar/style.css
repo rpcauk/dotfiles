@@ -27,7 +27,7 @@
     border: none;
     border-radius: 0;
     min-height: 0;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: JetBrainsMono, FontAwesome6Free;
     font-size: 12px;
 }
 
@@ -35,13 +35,6 @@ window#waybar {
     background: @nord0;
     border-bottom: 1px solid @nord6;
 }
-
-/*
-window#waybar > box {
-    margin: 10px 10px 0px 10px;
-    background-color: @nord0;
-}
-*/
 
 #workspaces button {
     padding: 0 5px;
@@ -70,7 +63,7 @@ window#waybar > box {
 #network,
 #battery,
 #clock,
-#custom-power,
+#custom-music,
 #pulseaudio {
     padding: 0 3px;
     background: @nord0;
@@ -87,6 +80,11 @@ window#waybar > box {
 
 #bluetooth.disabled,
 #bluetooth.off,
+#network.disabled {
+    padding: 0;
+}
+
+#bluetooth.on,
 #pulseaudio.muted,
 #pulseaudio.source-muted,
 #network.disconnected {

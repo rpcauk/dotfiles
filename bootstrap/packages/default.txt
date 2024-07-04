@@ -5,7 +5,6 @@ hypridle
 kitty
 waybar
 rofi-wayland
-ttf-cascadia-code-nerd
 neovim
 unzip
 less
@@ -30,6 +29,9 @@ lf
 man-db
 mpv
 mpd
+mpc
+ncmpcpp
+playerctl
 vlc
 unclutter
 unzip
@@ -51,3 +53,10 @@ openssh
 wev
 libnotify
 expect
+syncthing
+coreutils
+btrfs-progs
+exfat-utils
+noto-fonts-emoji
+ttf-jetbrains-mono
+ttf-font-awesome

@@ -1,0 +1,28 @@
+2024-06-25 12:06:11.275 [info] Telemetry level is off
+2024-06-25 12:06:11.275 [info] Experiments are disabled, only manually opted experiments are active.
+2024-06-25 12:06:11.275 [info] Default formatter is set to null for workspace /home/ryan/projects/smuyo
+2024-06-25 12:06:11.275 [info] Test server listening.
+2024-06-25 12:06:11.275 [info] > conda info --json
+2024-06-25 12:06:11.275 [info] > hatch env show --json
+2024-06-25 12:06:11.275 [info] cwd: .
+2024-06-25 12:06:11.275 [info] > pyenv which python
+2024-06-25 12:06:11.275 [info] cwd: .
+2024-06-25 12:06:11.276 [info] Found: /bin/python --> /bin/python3.12
+2024-06-25 12:06:11.277 [info] Found: /bin/python3 --> /bin/python3.12
+2024-06-25 12:06:11.277 [info] Found: /bin/python3.12 --> /bin/python3.12
+2024-06-25 12:06:11.399 [info] Found: /sbin/python --> /sbin/python3.12
+2024-06-25 12:06:11.400 [info] Found: /sbin/python3 --> /sbin/python3.12
+2024-06-25 12:06:11.400 [info] Found: /sbin/python3.12 --> /sbin/python3.12
+2024-06-25 12:06:11.412 [info] Found: /usr/bin/python --> /usr/bin/python3.12
+2024-06-25 12:06:11.412 [info] Found: /usr/bin/python3 --> /usr/bin/python3.12
+2024-06-25 12:06:11.412 [info] Found: /usr/bin/python3.12 --> /usr/bin/python3.12
+2024-06-25 12:06:11.432 [info] Found: /usr/sbin/python --> /usr/sbin/python3.12
+2024-06-25 12:06:11.432 [info] Found: /usr/sbin/python3 --> /usr/sbin/python3.12
+2024-06-25 12:06:11.433 [info] Found: /usr/sbin/python3.12 --> /usr/sbin/python3.12
+2024-06-25 12:06:11.448 [info] > /bin/python -I ~/.vscode-oss/extensions/ms-python.python-2024.4.1-universal/python_files/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2024.4.1-universal/python_files/interpreterInfo.py
+2024-06-25 12:06:11.458 [info] > /sbin/python -I ~/.vscode-oss/extensions/ms-python.python-2024.4.1-universal/python_files/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2024.4.1-universal/python_files/interpreterInfo.py
+2024-06-25 12:06:11.515 [info] > /usr/bin/python -I ~/.vscode-oss/extensions/ms-python.python-2024.4.1-universal/python_files/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2024.4.1-universal/python_files/interpreterInfo.py
+2024-06-25 12:06:11.522 [info] > /usr/sbin/python -I ~/.vscode-oss/extensions/ms-python.python-2024.4.1-universal/python_files/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2024.4.1-universal/python_files/interpreterInfo.py
+2024-06-25 12:06:11.586 [info] Python interpreter path: /bin/python
+2024-06-25 12:06:13.014 [info] Starting Jedi language server for smuyo.
+2024-06-25 13:01:41.953 [info] Discover tests for workspace name: undefined - uri: /home/ryan/.config/VSCodium/User/settings.json

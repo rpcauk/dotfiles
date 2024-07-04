@@ -1,3 +1,12 @@
 #!/bin/bash
 
+IFS='
+'
+escape(){ echo "$@" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g" ;}
+phones="$(simple-mtpfs -l 2>/dev/null | sed "s/^/ /")"
+echo "$phones"
 
+for phone in $phones; do
+  escphone="$(escape "$phone")"
+  echo "$escphone"
+done

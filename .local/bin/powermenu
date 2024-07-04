@@ -10,7 +10,7 @@ case "$chosen" in
     ;;
   "reboot")
     confirm=$(printf "no\nyes" | rofi -dmenu -p "confirm")
-    [ "$confirm" = "yes" ] && poweroff
+    [ "$confirm" = "yes" ] && reboot
     ;;
   *) exit 1 ;;
 esac

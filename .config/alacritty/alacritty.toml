@@ -1,0 +1,28 @@
+import = [
+    "~/.config/alacritty/nord.toml"
+]
+
+[window]
+opacity = 0.8
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "JetBrainsMono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono"
+style = "Bold Italic"
+
+[cursor.style]
+shape = "Beam"

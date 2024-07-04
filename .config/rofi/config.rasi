@@ -1,1 +1,4 @@
+configuration {
+  monitor: "eDP-1";
+}
 @theme ".config/rofi/nord.rasi"

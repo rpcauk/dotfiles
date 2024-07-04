@@ -3,7 +3,6 @@
   "output": "eDP-1",
   "height": 30,
   "spacing": 5,
-  // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces"
   ],
@@ -11,6 +10,7 @@
     "hyprland/window"
   ],
   "modules-right": [
+    "custom/music",
     "custom/separator",
     "bluetooth",
     "pulseaudio",
@@ -37,10 +37,10 @@
     "interval": 30,
     "format": "{icon}",
     "format-icons": {
-      "enabled": "󰂯",
-      "disabled": "󰂲",
-      "off": "󰂲",
-      "connected": "󰂱"
+      "connected": "",
+      "on": "",
+      "disabled": "",
+      "off": ""
     },
     "tooltip-format": "{device_alias} [{status}]"
   },
@@ -52,29 +52,32 @@
       "warning": 20
     },
     "format": "{icon} {capacity}%",
-    "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
-    "format-charging": "󰂄",
-    "format-warning": "󰂃"
+    "format-icons": [ "", "", "", "", "" ],
+    "format-charging": ""
   },
   "network": {
-    "format-wifi": "󰤨&#8239;",
-    "format-ethernet": "&#8239;",
-    "format-disconnected": "󰤭&#8239;",
+    "format-icons": {
+      "wifi": "",
+      "ethernet": "",
+      "disconnected": "",
+      "disabled": "",
+      "linked": "?"
+    },
     "tooltip-format": "Connected to {essid}",
     "on-click": "hyprctl dispatch exec '[float]' '$TERMINAL -e nmtui'"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰖁",
+    "format-muted": "",
     "format-source": "",
     "format-source-muted": "",
     "format-icons": {
       "default": ["", "", ""]
     }
   },
-  "custom/power": {
-    "format": "󰐥",
-    "on-click": "sleep 0.15 && powermenu"
+  "custom/music": {
+    "format": "{}",
+    "exec": "playerctl --player=mpd --follow metadata --format '{{ title }} - {{ artist }}'"
   }
 }
 

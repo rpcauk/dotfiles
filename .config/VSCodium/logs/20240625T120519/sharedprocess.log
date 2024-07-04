@@ -1,0 +1,36 @@
+2024-06-25 12:06:05.468 [info] Getting Manifest... ms-python.python
+2024-06-25 12:06:05.611 [info] Installing extension: ms-python.python vscode-userdata:/home/ryan/.vscode-oss/extensions/extensions.json
+2024-06-25 12:06:05.858 [info] Getting Manifest... ms-python.debugpy
+2024-06-25 12:06:06.157 [info] Installing extension: ms-python.debugpy vscode-userdata:/home/ryan/.vscode-oss/extensions/extensions.json
+2024-06-25 12:06:07.650 [info] Extracted extension to file:///home/ryan/.vscode-oss/extensions/ms-python.debugpy-2024.6.0-linux-x64: ms-python.debugpy
+2024-06-25 12:06:07.660 [info] Renamed to /home/ryan/.vscode-oss/extensions/ms-python.debugpy-2024.6.0-linux-x64
+2024-06-25 12:06:07.760 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/ryan/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/ryan/.vscode-oss/extensions/extensions.json.vsctmp'
+    at l.create (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:53:22053)
+    at m (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:53:22183)
+    at t.toFileSystemProviderError (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:58:48025)
+    at t.stat (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:58:38528)
+    at async v.stat (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:58:19752)
+    at async z.onDidFilesChange (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:104:144574)
+2024-06-25 12:06:10.456 [info] Extracted extension to file:///home/ryan/.vscode-oss/extensions/ms-python.python-2024.4.1-universal: ms-python.python
+2024-06-25 12:06:10.471 [info] Renamed to /home/ryan/.vscode-oss/extensions/ms-python.python-2024.4.1-universal
+2024-06-25 12:06:10.563 [info] Extension installed successfully: ms-python.debugpy vscode-userdata:/home/ryan/.vscode-oss/extensions/extensions.json
+2024-06-25 12:06:10.563 [info] Extension installed successfully: ms-python.python vscode-userdata:/home/ryan/.vscode-oss/extensions/extensions.json
+2024-06-25 12:06:10.567 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/ryan/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/ryan/.vscode-oss/extensions/extensions.json.vsctmp'
+    at l.create (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:53:22053)
+    at m (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:53:22183)
+    at t.toFileSystemProviderError (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:58:48025)
+    at t.stat (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:58:38528)
+    at async v.stat (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:58:19752)
+    at async z.onDidFilesChange (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:104:144574)
+2024-06-25 13:01:30.519 [info] Getting Manifest... arcticicestudio.nord-visual-studio-code
+2024-06-25 13:01:30.678 [info] Installing extension: arcticicestudio.nord-visual-studio-code vscode-userdata:/home/ryan/.vscode-oss/extensions/extensions.json
+2024-06-25 13:01:31.249 [info] Extracted extension to file:///home/ryan/.vscode-oss/extensions/arcticicestudio.nord-visual-studio-code-0.19.0-universal: arcticicestudio.nord-visual-studio-code
+2024-06-25 13:01:31.254 [info] Renamed to /home/ryan/.vscode-oss/extensions/arcticicestudio.nord-visual-studio-code-0.19.0-universal
+2024-06-25 13:01:31.342 [info] Extension installed successfully: arcticicestudio.nord-visual-studio-code vscode-userdata:/home/ryan/.vscode-oss/extensions/extensions.json
+2024-06-25 13:01:31.344 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/ryan/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/ryan/.vscode-oss/extensions/extensions.json.vsctmp'
+    at l.create (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:53:22053)
+    at m (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:53:22183)
+    at t.toFileSystemProviderError (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:58:48025)
+    at t.stat (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:58:38528)
+    at async v.stat (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:58:19752)
+    at async z.onDidFilesChange (/opt/vscodium-bin/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:104:144574)

@@ -1,0 +1,20 @@
+2024-06-25 12:01:30.155 [info] Log level: Info
+2024-06-25 12:01:30.155 [info] Validating found git in: "git"
+2024-06-25 12:01:30.155 [info] Using git "2.45.2" from "git"
+2024-06-25 12:01:30.155 [info] > git rev-parse --show-toplevel [3ms]
+2024-06-25 12:01:30.156 [info] > git rev-parse --git-dir --git-common-dir [3ms]
+2024-06-25 12:01:30.168 [info] Open repository: /home/ryan/projects/smuyo
+2024-06-25 12:01:30.184 [info] > git config --get commit.template [6ms]
+2024-06-25 12:01:30.206 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [4ms]
+2024-06-25 12:01:30.211 [warning] ENOENT: no such file or directory, open '/home/ryan/projects/smuyo/.git/refs/remotes/origin/master'
+2024-06-25 12:01:30.214 [info] > git rev-parse refs/remotes/origin/master [3ms]
+2024-06-25 12:01:30.228 [info] > git status -z -uall [9ms]
+2024-06-25 12:01:30.256 [info] > git merge-base refs/heads/master refs/remotes/origin/master [22ms]
+2024-06-25 12:01:30.276 [info] > git rev-list --count --left-right refs/heads/master...refs/remotes/origin/master [14ms]
+2024-06-25 12:01:30.283 [info] > git config --get commit.template [27ms]
+2024-06-25 12:01:30.312 [info] > git diff --name-status -z --diff-filter=ADMR 531407e0a4baa934754d94d88824fdca775b1649...refs/remotes/origin/master [30ms]
+2024-06-25 12:01:30.321 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2024-06-25 12:01:30.325 [warning] ENOENT: no such file or directory, open '/home/ryan/projects/smuyo/.git/refs/remotes/origin/master'
+2024-06-25 12:01:30.328 [info] > git rev-parse refs/remotes/origin/master [3ms]
+2024-06-25 12:01:30.335 [info] > git status -z -uall [3ms]
+2024-06-25 12:01:30.737 [info] > git check-ignore -v -z --stdin [4ms]

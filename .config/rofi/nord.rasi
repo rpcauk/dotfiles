@@ -3,7 +3,7 @@
   nord2: #434C5E;
   nord6: #ECEFF4;
   nord11: #BF616A;
-  font: "JetBrainsMono Nerd Font 9";
+  font: "JetBrainsMono 9";
 }
 
 window {
