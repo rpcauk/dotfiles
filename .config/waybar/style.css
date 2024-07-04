@@ -61,9 +61,10 @@ window#waybar {
 
 #bluetooth,
 #network,
+#mpd,
 #battery,
 #clock,
-#custom-music,
+#custom-media,
 #pulseaudio {
     padding: 0 3px;
     background: @nord0;
@@ -85,6 +86,7 @@ window#waybar {
 }
 
 #bluetooth.on,
+#custom-media.Paused,
 #pulseaudio.muted,
 #pulseaudio.source-muted,
 #network.disconnected {
@@ -105,3 +107,12 @@ window#waybar {
 .modules-right {
     margin-right: 5px;
 }
+
+/* Progress bar for media */
+/* https://github.com/raffaem/waybar-mediaplayer/tree/master */
+/*
+#custom-media {
+    border-bottom: 1px solid transparent;
+}
+@import "./waybarmedia.css";
+*/

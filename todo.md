@@ -1,6 +1,6 @@
 # TODO
 * Music player (waybar, media controls)
-* Camera
+* Make Camera floating window
 * Script to open work vm (open browser, wait for file, open in special workspace)
 * Make sure zoom citrix works
 * Update all packages on Saturday

@@ -60,3 +60,5 @@ exfat-utils
 noto-fonts-emoji
 ttf-jetbrains-mono
 ttf-font-awesome
+mpv-mpris
+tmux

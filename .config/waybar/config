@@ -7,10 +7,9 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "hyprland/window"
   ],
   "modules-right": [
-    "custom/music",
+    "custom/media",
     "custom/separator",
     "bluetooth",
     "pulseaudio",
@@ -42,7 +41,8 @@
       "disabled": "",
       "off": ""
     },
-    "tooltip-format": "{device_alias} [{status}]"
+    "tooltip-format": "{device_alias} [{status}]",
+    "on-click": "bluetoothmenu"
   },
   "clock": {
     "format": "{:%H:%M %a %e %b}"
@@ -56,6 +56,7 @@
     "format-charging": ""
   },
   "network": {
+    "format": "{icon}",
     "format-icons": {
       "wifi": "",
       "ethernet": "",
@@ -64,7 +65,7 @@
       "linked": "?"
     },
     "tooltip-format": "Connected to {essid}",
-    "on-click": "hyprctl dispatch exec '[float]' '$TERMINAL -e nmtui'"
+    "on-click": "networkmenu"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -75,9 +76,12 @@
       "default": ["", "", ""]
     }
   },
-  "custom/music": {
+  "custom/media": {
     "format": "{}",
-    "exec": "playerctl --player=mpd --follow metadata --format '{{ title }} - {{ artist }}'"
+    "return-type": "json",
+    "max-length":70,
+    "exec": "waybarmedia",
+    "on-click": "playerctl play-pause"
   }
 }
 
