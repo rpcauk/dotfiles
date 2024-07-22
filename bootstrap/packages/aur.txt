@@ -1,5 +1,4 @@
 zsh-syntax-highlighting
-icaclient
 zotify
 vscodium-bin
 mpd-mpris-bin

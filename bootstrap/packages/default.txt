@@ -62,3 +62,7 @@ ttf-jetbrains-mono
 ttf-font-awesome
 mpv-mpris
 tmux
+wl-clipboard
+cliphist
+jq
+rsync

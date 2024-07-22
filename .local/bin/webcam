@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -f "$XDG_RUNTIME_DIR/webcam.pid" ]; then
+    pkill -P "$(cat "$XDG_RUNTIME_DIR/webcam.pid")"
+    rm "$XDG_RUNTIME_DIR/webcam.pid"
+    exit 0
+fi
+echo "$$" > "$XDG_RUNTIME_DIR/webcam.pid"
+mpv --demuxer-lavf-o=video_size=1280x720,input_format=mjpeg av://v4l2:/dev/video0 --profile=low-latency --no-osc

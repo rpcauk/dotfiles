@@ -22,6 +22,9 @@
 * ~~Set rofi default to main monitor~~
 * Tridactyl
 * firefox userChrome
+* Firefox custom start page https://gitlab.com/fazzi/startpage and userChrome
 * sxhkd
 * Theme ncmpcpp with nord colors and add script to open in floating window for quick changes
 * Add mpd widget to waybar with playerctl https://www.reddit.com/r/bash/comments/x3ez5w/any_tip_on_optimizing_this/
+* ??? https://github.com/stepanzubkov/where-is-my-sddm-theme
+* pipewire linux mSBC

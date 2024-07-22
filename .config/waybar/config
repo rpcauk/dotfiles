@@ -30,7 +30,13 @@
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
-    "on-click": "activate"
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "9": ""
+    }
   },
   "bluetooth": {
     "interval": 30,
@@ -53,7 +59,7 @@
     },
     "format": "{icon} {capacity}%",
     "format-icons": [ "", "", "", "", "" ],
-    "format-charging": ""
+    "format-charging": " {capacity}%"
   },
   "network": {
     "format": "{icon}",
@@ -73,7 +79,7 @@
     "format-source": "",
     "format-source-muted": "",
     "format-icons": {
-      "default": ["", "", ""]
+      "default": ""
     }
   },
   "custom/media": {
@@ -81,7 +87,7 @@
     "return-type": "json",
     "max-length":70,
     "exec": "waybarmedia",
-    "on-click": "playerctl play-pause"
+    "on-click": "playerctl --player=mpd play-pause"
   }
 }
 

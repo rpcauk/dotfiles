@@ -1,0 +1,7 @@
+#!/bin/bash
+
+$BROWSER "https://mydesk.morganstanley.com"
+until [ -f "$HOME/Downloads/launchExtMSAD.ica" ]; do
+    sleep 1
+done
+hyprctl dispatch exec "[workspace 9]" /opt/Citrix/ICAClient/wfica "$HOME/Downloads/launchExtMSAD.ica"

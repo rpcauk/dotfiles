@@ -29,7 +29,8 @@ autoload -Uz colors && colors
 autoload -Uz vcs_info                  #
 zstyle ':vcs_info:git:*' formats ' %b' # Add git branch to prompt
 precmd() { vcs_info }                  #
-PROMPT=$'\n''%F{blue}%~%f%F{green}${vcs_info_msg_0_}%f'$'\n''%(?.%F{green}.%F{red})❯%f '
+#PROMPT=$'\n''%F{blue}%~%f%F{green}${vcs_info_msg_0_}%f'$'\n''%(?.%F{green}.%F{red})❯%f '
+PROMPT='%F{blue}%~%f%F{green}${vcs_info_msg_0_}%f %(?.%F{green}.%F{red})❯%f '
 
 # function preexec() {
 #   timer=$(($(date +%s%0N)/1000000))

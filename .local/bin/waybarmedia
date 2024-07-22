@@ -18,15 +18,15 @@ while true; do
 
 		# build line
 		# line="${artist:+$artist ${title:+- }}${title:+$title }${hpos:+$hpos${hlen:+|}}$hlen"
-		line="${title:+$title ${artist:+- }}${artist:+$artist}"
-		tooltip="${title:+$title ${album:+- }}${album:+$album }${artist:+- }${artist:+$artist }${hpos:+$hpos${hlen:+|}}$hlen"
+		line=" ${title:+$title ${artist:+- }}${artist:+$artist}"
+		tooltip="${title:+$title ${album:+- }}${album:+$album }${artist:+- }${artist:+$artist }${hpos:+$hpos${hlen:+ / }}$hlen"
 
 		# json escaping
 		line="${line//\"/\\\"}"
 		((percentage = length ? (100 * (position % length)) / length : 0))
 		case $status in
-		    Paused) text=" $line" ;;
-		    Playing) text=" $line" ;;
+		    Paused) text="$line" ;;
+		    Playing) text="$line" ;;
 		    *) text="" ;;
 		esac
 
